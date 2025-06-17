@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/chart.umd.min.js.js"></script>
+    <style>
+        .graph {
+            background-color: rgb(231, 236, 235);
+            color: rgb(179, 164, 177);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="graph">
+        <canvas id="graph" width="500" height="500"></canvas>
+    </div>
+
+    <script>
+        let ctx = document.getElementById('graph').getContext('2d');
+        let graphique = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["Téléphones", "Ordinateur", "Tablettes", "Casque", "Montre Connectés"],
+                datasets: [{
+                    label: "Ventes de produit électronique",
+                    data: [350, 280, 180, 120, 90],
+                    backgroundColor: ["#00008b", "#03c03c", "#e62020", "#ff004f", "#138808"],
+                    borderWidth: 3,
+                    borderColor: "#4b0082",
+                }],
+                
+            },
+            options: {
+                responsive: false
+            }
+        })
+    </script>
+</body>
+</html>

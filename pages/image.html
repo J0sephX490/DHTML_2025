@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redimensionner l'image</title>
+    <link rel="stylesheet" href="/styles/images.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="../accueil.html">Accueil</a>
+        <a href="./cramer.html">Cramer</a>
+        <a href="#">Panneau</a>
+        <a href="#">Datable</a>
+    </nav>
+    <main class="containeur">
+        <div class="slider-col">
+            <label>Largeur :
+                <input type="range" id="sliderLargeur" min="100" max="1000" value="600">
+                <span id="valLargeur">600</span> px
+            </label>
+            <br>
+            <label>Hauteur :
+                <input type="range" id="sliderHauteur" min="100" max="800" value="400">
+                <span id="valHauteur">400</span> px
+            </label>
+        </div>
+        <div class="image-col">
+            <img src="/images/mitsu.JPG" alt="images" id="ImageRed" style="width:600px; height:400px;">
+        </div>
+    </main>
+    <footer>© 2025 – Projet DHTML L1</footer>
+    <script>
+    $(function() {
+        $('#sliderLargeur').on('input', function() {
+            $('#ImageRed').css('width', $(this).val() + 'px');
+            $('#valLargeur').text($(this).val());
+        });
+        $('#sliderHauteur').on('input', function() {
+            $('#ImageRed').css('height', $(this).val() + 'px');
+            $('#valHauteur').text($(this).val());
+        });
+    });
+    </script>
+</body>
+</html>

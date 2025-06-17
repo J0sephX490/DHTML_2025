@@ -1,0 +1,162 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: rgba(34, 46, 85, 0.9);
+    padding: 18px 0;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    background: rgba(124, 162, 192, 0.7);
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: background 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    background: #1c03ff;
+    transform: scale(1.08);
+}
+
+main.containeur {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex: 1;
+    width: 100%;
+    min-height: 60vh;
+}
+
+.slider-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    min-width: 260px;
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 30px 24px;
+    box-shadow: 0 4px 24px rgba(34, 46, 85, 0.07);
+    height: fit-content;
+}
+
+.image-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+label {
+    font-size: 1.1em;
+    color: #22305a;
+    font-weight: 500;
+}
+
+input[type="range"] {
+    width: 250px;
+    accent-color: #4f8cff;
+    margin: 0 10px;
+    height: 4px;
+    border-radius: 5px;
+    background: #e0e7ef;
+    outline: none;
+    transition: accent-color 0.3s;
+}
+
+input[type="range"]:hover {
+    accent-color: #1c03ff;
+}
+
+#valLargeur,
+#valHauteur {
+    font-weight: bold;
+    color: #1c03ff;
+}
+
+#ImageRed {
+    object-position: center;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(34, 46, 85, 0.13);
+    transition: width 0.5s, height 0.5s;
+    background: #e0e7ef;
+    object-fit: cover;
+    max-width: 60vw;
+    max-height: 70vh;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    width: 100%;
+    background: rgba(34, 46, 85, 0.9);
+    color: #fff;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.team-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ecf0f1;
+    position: relative;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    main.containeur {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .slider-col,
+    .image-col {
+        max-width: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #ImageRed {
+        max-width: 98vw;
+        max-height: 40vh;
+    }
+
+    input[type="range"] {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    main.containeur {
+        gap: 18px;
+    }
+}

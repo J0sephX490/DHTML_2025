@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/cramer.css">
+    <script src="/js/cramer.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="../accueil.html"> <span class="emojie">🏡 </span>Accueil</a>
+        <a href="./image.html"> <span class="emojie">📸 </span>Redimensionner une Image</a>
+        <a href="#"><span class="emojie">📊</span>Panneau</a>
+        <a href="#"><span class="emojie">💸 </span>Datable</a>
+    </nav>
+    <main id="page-cramer" class="page">
+        <h1>resolution de l'equation du type</h1>
+        <div>
+            <span id="vA11">A<sub>11</sub></span>X<sub>1</sub> +
+            <span id="vA12">A<sub>12</sub></span>X<sub>2</sub> +
+            <span id="vA13">A<sub>13</sub></span>X<sub>3</sub> =
+            <span id="vB1">B<sub>1</sub></span> <br>
+            <span id="vA21">A<sub>21</sub></span>X<sub>1</sub> +
+            <span id="vA22">A<sub>22</sub></span>X<sub>2</sub> +
+            <span id="vA23">A<sub>23</sub></span>X<sub>3</sub> =
+            <span id="vB2">B<sub>2</sub></span> <br>
+            <span id="vA31">A<sub>31</sub></span>X<sub>1</sub> +
+            <span id="vA32">A<sub>32</sub></span>X<sub>2</sub> +
+            <span id="vA33">A<sub>33</sub></span>X<sub>3</sub> =
+            <span id="vB3">B<sub>3</sub></span> <br>
+        </div>
+        <div class="cramer-grid">
+            <label for="input">A <sub>11</sub>
+                <input type="number" id="A11" required>
+            </label>
+
+            <label for="input">A <sub>12</sub>
+                <input type="number" id="A12" required>
+            </label>
+
+            <label for="input">A <sub>13</sub>
+                <input type="number" id="A13" required>
+            </label>
+
+            <label for="input">B<sub>1</sub>
+                <input type="number" id="B1" required>
+            </label>
+
+            <label for="input">A <sub>21</sub>
+                <input type="number" id="A21" required>
+            </label>
+
+            <label for="input">A <sub>22</sub>
+                <input type="number" id="A22" required>
+            </label>
+
+            <label for="input">A <sub>23</sub>
+                <input type="number" id="A23" required>
+            </label>
+
+            <label for="input">B<sub>2</sub>
+                <input type="number" id="B2" required>
+            </label>
+
+            <label for="input">A <sub>31</sub>
+                <input type="number" id="A31" required>
+            </label>
+
+            <label for="input">A <sub>32</sub>
+                <input type="number" id="A32" required>
+            </label>
+
+            <label for="input">A <sub>33</sub>
+                <input type="number" id="A33" required>
+            </label>
+
+            <label for="input">B<sub>3</sub>
+                <input type="number" id="B3" required>
+            </label>
+        </div>
+        <div style="display: flex; align-items: center; flex-direction: column;"></div>
+        <button onclick="resolution()">RESOUDRE</button>
+        <div id="resultat">Ici votre resultat</div>
+    </main>
+
+    <footer>© 2025 – Projet DHTML L1</footer>
+</body>
+
+</html>
