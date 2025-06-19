@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Suite - Accueil</title>
+    <style>
+        .features-menu {
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+            margin: 2em 0;
+        }
+        .features-menu button {
+            padding: 0.7em 1.5em;
+            border: none;
+            border-radius: 8px;
+            background: #005fa3;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .features-menu button.active,
+        .features-menu button:hover {
+            background: #f9d342;
+            color: #222;
+        }
+        .feature-section {
+            display: none;
+            max-width: 700px;
+            margin: 2em auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            padding: 2em;
+        }
+        .feature-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">DHTML Suite - Accueil</h1>
+    <div class="features-menu">
+        <button onclick="showFeature(0)" class="active">Accueil</button>
+        <button onclick="showFeature(1)">Cramer</button>
+        <button onclick="showFeature(2)">Image</button>
+        <button onclick="showFeature(3)">Panneau</button>
+        <button onclick="showFeature(4)">Datatable</button>
+    </div>
+
+    <div id="features">
+        <section class="feature-section active">
+            <h2>Bienvenue sur DHTML Suite</h2>
+            <p>Page d'accueil avec accès rapide à toutes les fonctionnalités.</p>
+        </section>
+        <section class="feature-section">
+            <h2>Cramer</h2>
+            <p>Résolution de systèmes à 3 inconnues (exemple de fonctionnalité).</p>
+        </section>
+        <section class="feature-section">
+            <h2>Image</h2>
+            <p>Redimensionner ou traiter une image (exemple de fonctionnalité).</p>
+        </section>
+        <section class="feature-section">
+            <h2>Panneau</h2>
+            <p>Animation publicitaire ou affichage dynamique (exemple de fonctionnalité).</p>
+        </section>
+        <section class="feature-section">
+            <h2>Datatable</h2>
+            <p>Tableau interactif pour la gestion de données (exemple de fonctionnalité).</p>
+        </section>
+    </div>
+
+    <script>
+        function showFeature(idx) {
+            const sections = document.querySelectorAll('.feature-section');
+            const buttons = document.querySelectorAll('.features-menu button');
+            sections.forEach((sec, i) => {
+                sec.classList.toggle('active', i === idx);
+                buttons[i].classList.toggle('active', i === idx);
+            });
+        }
+    </script>
+</body>
+</html>

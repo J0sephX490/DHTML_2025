@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'accueil</title>
     <link rel="stylesheet" href="/styles/accueil.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
     <header>
-        <img src="/images/logo.png" class="logo" alt="Logo">
-        <h1>Projet DHTML L1 2025</h1>
+        <div class="gauche">
+            <img src="/images/logo.png" class="logo" alt="Logo">
+            <h1>DHTML Suite</h1>
+        </div>
+
+        <div class="header-actions">
+            <button class="contact-btn">Contact</button>
+            <div class="social-icons">
+                <a href="https://github.com/J0sephX490" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
     </header>
     <main>
         <nav>
-            <a href="auteur.html">
+            <a href="./pages/page_accueil.html">
                 <img src="/images/dev.jpg" alt="Développeur">
                 <h2>Page d'accueil</h2>
                 <p>contenant plusieurs fonctionnalité</p>
@@ -56,5 +71,4 @@
         </div>
     </footer>
 </body>
-
 </html>
