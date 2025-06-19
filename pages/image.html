@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,18 @@
     <link rel="stylesheet" href="/styles/images.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
+
 <body>
-    <nav>
-        <a href="../accueil.html">Accueil</a>
-        <a href="./cramer.html">Cramer</a>
-        <a href="#">Panneau</a>
-        <a href="#">Datable</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="nav-logo">DHTML Suite</span>
+            <ul class="nav-links">
+                <li><a href="../accueil.html">Accueil</a></li>
+                <li><a href="./cramer.html">Cramer</a></li>
+                <li><a href="./image.html">Redimensionner une image</a></li>
+                <li><a href="./publicitaire.html">Panneau publicitaire</a></li>
+            </ul>
+        </div>
     </nav>
     <main class="containeur">
         <div class="slider-col">
@@ -30,30 +37,31 @@
             <img src="/images/mitsu.JPG" alt="images" id="ImageRed" style="width:600px; height:400px;">
         </div>
     </main>
-    
-      <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2025 DHTML Suite. Tous droits réservés.</p>
-      <ul class="footer-links">
-        Auteurs:
-        <li><a href="#">Jean Joseph</a></li>
-        <li><a href="#">Mitsu</a></li>
-        <li><a href="#">Joubert</a></li>
-        <li><a href="#">Diary honorah</a></li>
-      </ul>
-    </div>
-  </footer>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 DHTML Suite. Tous droits réservés.</p>
+            <ul class="footer-links">
+                Auteurs:
+                <li><a href="#">Jean Joseph</a></li>
+                <li><a href="#">Mitsu</a></li>
+                <li><a href="#">Joubert</a></li>
+                <li><a href="#">Diary honorah</a></li>
+            </ul>
+        </div>
+    </footer>
     <script>
-    $(function() {
-        $('#sliderLargeur').on('input', function() {
-            $('#ImageRed').css('width', $(this).val() + 'px');
-            $('#valLargeur').text($(this).val());
+        $(function () {
+            $('#sliderLargeur').on('input', function () {
+                $('#ImageRed').css('width', $(this).val() + 'px');
+                $('#valLargeur').text($(this).val());
+            });
+            $('#sliderHauteur').on('input', function () {
+                $('#ImageRed').css('height', $(this).val() + 'px');
+                $('#valHauteur').text($(this).val());
+            });
         });
-        $('#sliderHauteur').on('input', function() {
-            $('#ImageRed').css('height', $(this).val() + 'px');
-            $('#valHauteur').text($(this).val());
-        });
-    });
     </script>
 </body>
+
 </html>

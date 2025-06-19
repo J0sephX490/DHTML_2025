@@ -7,29 +7,56 @@ body {
     flex-direction: column;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    background: rgba(34, 46, 85, 0.9);
-    padding: 18px 0;
-    margin-bottom: 30px;
+
+.navbar {
+    background: linear-gradient(30deg, #2d3e50 90%, #ff0000 100%);
+    color: #fff;
+    padding: 1.2em 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-nav a {
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    color: rgb(255, 111, 85);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    background-color: rgba(79, 219, 98, 0.096);
     color: #fff;
     text-decoration: none;
-    background: rgba(124, 162, 192, 0.7);
-    padding: 10px 22px;
-    border-radius: 8px;
     font-weight: 500;
-    font-size: 1.1em;
-    transition: background 0.3s, transform 0.2s;
+    font-size: 1.05em;
+    padding: 12px 14px;
+    border-radius: 6px;
+    transition: 1s;
 }
 
-nav a:hover {
-    background: #1c03ff;
-    transform: scale(1.08);
+.nav-links a:hover {
+    transition: 1s;
+    background-color: rgb(236, 46, 13);
+    color: #ffffff;
+
 }
 
 main.containeur {
