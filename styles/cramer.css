@@ -1,39 +1,43 @@
 /* Modernisation globale */
 body {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    min-height: 100vh;
-    margin: 0;
-    background: linear-gradient(120deg, #cbd3d6 0%, #e0e7ef 100%);
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(rgba(227, 238, 238, 0.541), rgba(0, 66, 247, 0.247)), url('../images/background3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* Header */
 header {
-    justify-content: center;
-    display: flex;
-    background-color: rgb(63, 63, 63);
-    height: 10%;
-    margin-top: 0px;
-    color: #fff;
-    font-size: 1.5em;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  justify-content: center;
+  display: flex;
+  background-color: rgb(63, 63, 63);
+  height: 10%;
+  margin-top: 0px;
+  color: #fff;
+  font-size: 1.5em;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
 }
+
 .presentation {
-    display: flex;
+  display: flex;
 }
+
 /* Page container */
 #page-cramer {
-    background-color: transparent;
-    flex: 1;
-    min-height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+  background-color: transparent;
+  flex: 1;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 /* Navigation */
@@ -92,83 +96,89 @@ header {
 
 /* Grille de saisie */
 .cramer-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-    margin: 30px 0;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 30px 0;
+  justify-items: center;
 }
+
 input {
-    padding: 5px 12px;
-    border-radius: 6px;
-    margin: 5px 0;
-    border: 1px solid #b0c4de;
-    background-color: #f7fbff;
-    font-size: 1em;
-    transition: border 0.3s;
+  padding: 5px 12px;
+  border-radius: 6px;
+  margin: 5px 0;
+  border: 1px solid #b0c4de;
+  background-color: #f7fbff;
+  font-size: 1em;
+  transition: border 0.3s;
 }
+
 input:focus {
-    border: 1.5px solid #4f8cff;
-    outline: none;
+  border: 1.5px solid #4f8cff;
+  outline: none;
 }
 
 /* Bouton moderne */
 button {
-    text-align: center;
-    padding: 10px 32px;
-    background-color: #3e379b;
-    color: #fff;
-    border: none;
-    margin-top: 20px;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: bold;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-    display: block;
-    margin-left: auto;
-    margin-bottom: 12px;
-    margin-right: auto;
+  text-align: center;
+  padding: 10px 32px;
+  background-color: #3e379b;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 12px;
+  margin-right: auto;
 }
+
 button:hover {
-    background-color:  rgb(236, 46, 13);
-    transform: scale(1.07) translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    color: #fff;
+  background-color: rgb(236, 46, 13);
+  transform: scale(1.07) translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  color: #fff;
 }
 
 /* Centrage parfait de #resultat */
 #resultat {
-    display: flex;
-    font-size: 1.3em;
-    border: 2px solid #4f8cff;
-    width: 60%;
-    min-width: 250px;
-    max-width: 700px;
-    background: linear-gradient(120deg, #e0e7ef 0%, #c2e9fb 100%);
-    color: #22305a;
-    min-height: 80px;
-    height: 250px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(34,46,85,0.07);
-    transition: background 0.5s, color 0.5s;
+  display: flex;
+  font-size: 1.3em;
+  border: 2px solid #4f8cff;
+  width: 60%;
+  min-width: 250px;
+  max-width: 700px;
+  background: linear-gradient(120deg, #e0e7ef 0%, #c2e9fb 100%);
+  color: #22305a;
+  min-height: 80px;
+  height: 250px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(34, 46, 85, 0.07);
+  transition: background 0.5s, color 0.5s;
 }
 
 
 /* Footer moderne */
 .footer {
-  background: linear-gradient(35deg, #2d3e50 10%, #222 2%,   #2d4055 88%);
+  background-image: linear-gradient(35deg, #2d3e50 10%, #222 2%, #2d4055d7 88%), url('../images/cat.jpg');
+  background-position: center;
+  background-size: cover;
   color: #fff;
   padding: 2em 0 1.2em 0;
   margin-top: 3em;
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.07);
 }
+
 .footer-content {
   max-width: 1100px;
   margin: 0 auto;
@@ -178,6 +188,7 @@ button:hover {
   padding: 0 1em;
   flex-wrap: wrap;
 }
+
 .footer-links {
   list-style: none;
   display: flex;
@@ -185,6 +196,7 @@ button:hover {
   margin: 0;
   padding: 0;
 }
+
 .footer-links a {
   border-radius: 8px;
   padding: 12px 19px;
@@ -195,27 +207,32 @@ button:hover {
   transition: 1s;
   transition: text-decoration 0.2s, color 0.2s;
 }
+
 .footer-links a:hover {
-  background-color:  #324a64 ;
+  background-color: #324a64;
   color: white;
   transition: 1s;
 }
+
 /* Responsive */
 @media (max-width: 700px) {
-    .cramer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-    #resultat {
-        width: 95%;
-        font-size: 1em;
-    }
-    button {
-        width: 100%;
-        font-size: 1em;
-    }
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .cramer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  #resultat {
+    width: 95%;
+    font-size: 1em;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

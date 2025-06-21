@@ -4,6 +4,9 @@ body {
     flex-direction: column;
     margin: 0;
     align-items: stretch;
+    background-image: url('../images/background1.jpeg');
+    background-position: center;
+    background-size: cover;
 }
 
 .navbar {
@@ -56,6 +59,7 @@ body {
     color: #ffffff;
 
 }
+
 main {
     flex: 1;
 }
@@ -69,20 +73,20 @@ img {
 }
 
 #panneau {
+    color: white;
     z-index: 9999;
-    margin-top: 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 12px 15px;
-    background-color: rgb(209, 221, 231);
+    padding: 22px 5px;
+    background-color: rgba(145, 180, 221, 0.26);
     position: fixed;
     border-radius: 40px;
-    top: 10px;
-    left: 50px;
+    top: 108px;
+    left: 500px;
     right: 50%;
-    width: 90%;
+    width: 50%;
 
 }
 
@@ -106,7 +110,9 @@ img {
 
 /* Footer moderne */
 .footer {
-    background: linear-gradient(35deg, #2d3e50 10%, #222 2%, #2d4055 88%);
+    background-image: linear-gradient(35deg, #2d3e50 10%, #222 2%, #2d4055d7 88%), url('../images/cat.jpg');
+    background-position: center;
+    background-size: cover;
     color: #fff;
     padding: 2em 0 1.2em 0;
     margin-top: 3em;
