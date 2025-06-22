@@ -1,7 +1,7 @@
 // Met à jour l'affichage des coefficients dès la saisie
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.cramer-grid input').forEach(input => {
-        input.addEventListener('input', function() {
+        input.addEventListener('input', function () {
             const id = this.id;
             const val = this.value;
             const span = document.getElementById('v' + id.toUpperCase());
@@ -27,9 +27,11 @@ function resolution() {
         }
     }
     if (!valide) {
-        document.getElementById("resultat").innerText = "veuillez remplir tous les champs correctement";
-        return;
+        let a = document.getElementById("resultat");
+        a.innerHTML = '<span style="color:red">veuillez remplir tous les champs correctement</span>';
+        return
     }
+
 
     //déclaration des variables
     const A11 = parseFloat(document.getElementById("A11").value);

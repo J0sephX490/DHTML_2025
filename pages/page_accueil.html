@@ -1,68 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DHTML Suite - Accueil</title>
-    <style>
-        .features-menu {
-            display: flex;
-            gap: 1em;
-            justify-content: center;
-            margin: 2em 0;
-        }
-        .features-menu button {
-            padding: 0.7em 1.5em;
-            border: none;
-            border-radius: 8px;
-            background: #005fa3;
-            color: #fff;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .features-menu button.active,
-        .features-menu button:hover {
-            background: #f9d342;
-            color: #222;
-        }
-        .feature-section {
-            display: none;
-            max-width: 700px;
-            margin: 2em auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            padding: 2em;
-        }
-        .feature-section.active {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="/styles/pageAccueil.css">
+    <script src="/js/PageAccueil.js"></script>
 </head>
+
 <body>
     <h1 style="text-align:center;">DHTML Suite - Accueil</h1>
     <div class="features-menu">
-        <button onclick="showFeature(0)" class="active">Accueil</button>
-        <button onclick="showFeature(1)">Cramer</button>
-        <button onclick="showFeature(2)">Image</button>
-        <button onclick="showFeature(3)">Panneau</button>
-        <button onclick="showFeature(4)">Datatable</button>
+        <button onclick="window.location.href='../accueil.html'">Accueil</button>
+        <button onclick="showFeature(0)">Cramer</button>
+        <button onclick="showFeature(1)">Image</button>
+        <button onclick="showFeature(2)">Panneau</button>
+        <button onclick="showFeature(3)">Datatable</button>
     </div>
 
     <div id="features">
         <section class="feature-section active">
-            <h2>Bienvenue sur DHTML Suite</h2>
-            <p>Page d'accueil avec accès rapide à toutes les fonctionnalités.</p>
+            <h1>Résolution d'équation de la forme <br> ax² + bx + c = 0</h1>
+            <form id="equationForm" onsubmit="event.preventDefault(); equation();">
+                <input type="number" id="a" placeholder="valeur de a" aria-label="Coefficient a" required><br>
+                <input type="number" id="b" placeholder="valeur de b" aria-label="Coefficient b" required><br>
+                <input type="number" id="c" placeholder="valeur de c" aria-label="Coefficient c" required><br>
+                <button type="submit">Solution</button>
+            </form>
+            <div id="resultat"></div>
         </section>
+
         <section class="feature-section">
-            <h2>Cramer</h2>
-            <p>Résolution de systèmes à 3 inconnues (exemple de fonctionnalité).</p>
+            <div class="container">
+                <div>
+                    <img class="img1" src="/images/img1.jpg" alt="Paysage naturel">
+                </div>
+                <div>
+                    <h1 id="titre" class="texte">
+                        Make your <br> home beautiful <br> with plants
+                    </h1>
+                    <div id="description" class="texte">
+                        Unlock the secrets of greenery and infuse every corner <br> with life and serenity. From vibrant
+                        blooms to lush <br>
+                        foliage, let your home reflect the timeless elegance of nature's bounty.
+                    </div>
+                    <div class="image2">
+                        <img id="image1" onclick="changeImage()" class="img3" src="/images/img2.jpg" alt="Plante verte">
+                        <img class="img4" src="/images/img4.webp" alt="Vase décoratif">
+                    </div>
+                    <button id="suivant" onclick="changeImage()" aria-label="Image suivante">⏩➡️</button>
+                </div>
+            </div>
         </section>
-        <section class="feature-section">
-            <h2>Image</h2>
-            <p>Redimensionner ou traiter une image (exemple de fonctionnalité).</p>
-        </section>
+
         <section class="feature-section">
             <h2>Panneau</h2>
             <p>Animation publicitaire ou affichage dynamique (exemple de fonctionnalité).</p>
@@ -72,16 +63,7 @@
             <p>Tableau interactif pour la gestion de données (exemple de fonctionnalité).</p>
         </section>
     </div>
-
-    <script>
-        function showFeature(idx) {
-            const sections = document.querySelectorAll('.feature-section');
-            const buttons = document.querySelectorAll('.features-menu button');
-            sections.forEach((sec, i) => {
-                sec.classList.toggle('active', i === idx);
-                buttons[i].classList.toggle('active', i === idx);
-            });
-        }
-    </script>
+    <!-- Le script JS doit gérer l'affichage des sections et le changement d'image -->
 </body>
+
 </html>

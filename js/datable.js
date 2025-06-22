@@ -30,7 +30,7 @@ window.onload = function () {
 
     const ctx = document.getElementById('graphique').getContext('2d');
     let graphique = new Chart(ctx, {
-        type: 'pie',
+        type: 'bar',
         data: {
             labels: labels,
             datasets: [{
