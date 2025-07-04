@@ -114,7 +114,7 @@ img {
     background-position: center;
     background-size: cover;
     color: #fff;
-    padding: 2em 0 1.2em 0;
+    padding: 2em 2rem 1.2em 0;
     margin-top: 3em;
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
@@ -142,7 +142,6 @@ img {
 .footer-links a {
     border-radius: 8px;
     padding: 12px 19px;
-    background-color: #162c193f;
     color: rgb(195, 204, 190);
     text-decoration: none;
     font-size: 1em;

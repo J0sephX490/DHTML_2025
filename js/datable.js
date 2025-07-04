@@ -1,33 +1,41 @@
-window.onload = function () {
-    const table = document.getElementById('produits');
-    const rows = table.querySelectorAll('tbody tr');
+$(document).ready(function () {
+    // Initialiser DataTable
+    let table = $('#produits').DataTable({
+        paging: true,
+        info: true,
+        searching: true
+    });
+
     let totalMontant = 0;
     let totalPrixUnitaire = 0;
     let prixUnitaires = [];
     let quantites = [];
     let labels = [];
 
-    rows.forEach(row => {
-        const qte = parseFloat(row.children[1].textContent);
-        const prix = parseFloat(row.children[2].textContent);
+    // Parcourir les lignes du tableau via DataTable
+    table.rows().every(function () {
+        let data = this.data();
+        const qte = parseFloat($(data[1]).text() || data[1]);
+        const prix = parseFloat($(data[2]).text() || data[2]);
         const montant = qte * prix;
-        row.children[3].textContent = montant;
+        // Mettre à jour la colonne Montant
+        $(this.node()).find('td').eq(3).text(montant);
         totalMontant += montant;
         totalPrixUnitaire += prix;
         prixUnitaires.push(prix);
         quantites.push(qte);
-        labels.push(row.children[0].textContent);
-    })
+        labels.push($(data[0]).text() || data[0]);
+    });
 
-    document.getElementById('totalMontant').textContent = totalMontant;
+    $('#totalMontant').text(totalMontant);
+    $('#totalUt').text(totalPrixUnitaire);
 
-    document.getElementById('totalUt').textContent = totalPrixUnitaire;
+    const stats = $('#en-bas p');
+    stats.eq(0).text("Prix Moyen:   " + (totalPrixUnitaire / prixUnitaires.length).toFixed(2));
+    stats.eq(1).text("Prix Minimal: " + Math.min(...prixUnitaires));
+    stats.eq(2).text("Prix Maximal: " + Math.max(...prixUnitaires));
 
-    const stats = document.querySelectorAll('#en-bas p');
-    stats[0].textContent = "Prix Moyen:   " + (totalPrixUnitaire / prixUnitaires.length).toFixed(2);
-    stats[1].textContent = "Prix Minimal: " + Math.min(...prixUnitaires);
-    stats[2].textContent = "Prix Maximal: " + Math.max(...prixUnitaires);
-
+    // Graphique Chart.js (inchangé)
     const ctx = document.getElementById('graphique').getContext('2d');
     let graphique = new Chart(ctx, {
         type: 'bar',
@@ -42,11 +50,11 @@ window.onload = function () {
                     'rgba(22, 255, 1, 0.7)',
                     'rgba(0, 4, 255, 0.7)'
                 ],
-                borderColor: [          
+                borderColor: [
                     'rgba(255, 206, 86, 1)',
                 ],
                 borderWidth: 3,
-                hoverBorderColor:'white'
+                hoverBorderColor: 'white'
             }]
         },
         options: {
@@ -62,4 +70,4 @@ window.onload = function () {
             }
         }
     });
-};
+});

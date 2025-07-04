@@ -4,66 +4,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DHTML Suite - Accueil</title>
+    <title>Multi-Univers - Accueil</title>
     <link rel="stylesheet" href="/styles/pageAccueil.css">
     <script src="/js/PageAccueil.js"></script>
 </head>
 
 <body>
-    <h1 style="text-align:center;">DHTML Suite - Accueil</h1>
-    <div class="features-menu">
-        <button onclick="window.location.href='../accueil.html'">Accueil</button>
-        <button onclick="showFeature(0)">Cramer</button>
-        <button onclick="showFeature(1)">Image</button>
-        <button onclick="showFeature(2)">Panneau</button>
-        <button onclick="showFeature(3)">Datatable</button>
-    </div>
+    <!-- Barre de navigation principale -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="nav-logo">DHTML Suite</span>
+            <ul class="nav-links">
+                <li><a href="../accueil.html">Accueil</a></li>
+                <li><a href="./cramer.html">Cramer</a></li>
+                <li><a href="./publicitaire.html">Panneau publicitaire</a></li>
+                <li><a href="./datable.html">Datatable</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div id="features">
-        <section class="feature-section active">
-            <h1>Résolution d'équation de la forme <br> ax² + bx + c = 0</h1>
-            <form id="equationForm" onsubmit="event.preventDefault(); equation();">
-                <input type="number" id="a" placeholder="valeur de a" aria-label="Coefficient a" required><br>
-                <input type="number" id="b" placeholder="valeur de b" aria-label="Coefficient b" required><br>
-                <input type="number" id="c" placeholder="valeur de c" aria-label="Coefficient c" required><br>
-                <button type="submit">Solution</button>
-            </form>
-            <div id="resultat"></div>
-        </section>
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <ul>
+                <li><button data-icon="🏠" onclick="showFeature(0)">Petit Résumé</button></li>
+                <li><button data-icon="📰" onclick="showFeature(1)">Actualités</button></li>
+                <li><button data-icon="🖼️" onclick="showFeature(2)">Galerie</button></li>
+                <li><button data-icon="📅" onclick="showFeature(3)">Agenda</button></li>
+                <li><button data-icon="⚙️" onclick="showFeature(4)">Paramètres</button></li>
+            </ul>
+        </nav>
 
-        <section class="feature-section">
-            <div class="container">
-                <div>
-                    <img class="img1" src="/images/img1.jpg" alt="Paysage naturel">
-                </div>
-                <div>
-                    <h1 id="titre" class="texte">
-                        Make your <br> home beautiful <br> with plants
-                    </h1>
-                    <div id="description" class="texte">
-                        Unlock the secrets of greenery and infuse every corner <br> with life and serenity. From vibrant
-                        blooms to lush <br>
-                        foliage, let your home reflect the timeless elegance of nature's bounty.
+        <!-- Contenu principal -->
+        <main class="content">
+            <section id="features">
+                <!-- Accueil -->
+                <div class="feature-section active">
+                    <h2>Résumé : JavaScript</h2>
+                    <p>
+                        JavaScript est un langage de programmation essentiel pour le développement web moderne. Il
+                        permet de rendre les pages interactives, dynamiques et réactives côté client.
+                    </p>
+                    <ul>
+                        <li>📄 <strong>Définition :</strong> Langage de script interprété, principalement utilisé dans
+                            les navigateurs.</li>
+                        <li>🧩 <strong>Fonctions principales :</strong> Manipulation du DOM, gestion des événements,
+                            requêtes AJAX, animations, etc.</li>
+                        <li>⚙️ <strong>Syntaxe :</strong> Variables (<code>let</code>, <code>const</code>), fonctions,
+                            objets, tableaux, boucles, conditions...</li>
+                        <li>🌐 <strong>Utilisation :</strong> Frontend (navigateur), Backend (Node.js), applications
+                            mobiles et desktop.</li>
+                        <li>🔒 <strong>Bonnes pratiques :</strong> Sécurité, modularité, commentaires, nommage clair,
+                            gestion des erreurs.</li>
+                    </ul>
+                    <div style="margin-top:2em;">
+                        <h3 style="color:#b8c1ec;">Exemple simple</h3>
+                        <pre
+                            style="background:#181c24;color:#eebbc3;padding:12px 18px;border-radius:8px;overflow-x:auto;">
+ // Afficher un message dans la console
+console.log("Bienvenue en JavaScript !");
+                        </pre>
                     </div>
-                    <div class="image2">
-                        <img id="image1" onclick="changeImage()" class="img3" src="/images/img2.jpg" alt="Plante verte">
-                        <img class="img4" src="/images/img4.webp" alt="Vase décoratif">
-                    </div>
-                    <button id="suivant" onclick="changeImage()" aria-label="Image suivante">⏩➡️</button>
                 </div>
-            </div>
-        </section>
 
-        <section class="feature-section">
-            <h2>Panneau</h2>
-            <p>Animation publicitaire ou affichage dynamique (exemple de fonctionnalité).</p>
-        </section>
-        <section class="feature-section">
-            <h2>Datatable</h2>
-            <p>Tableau interactif pour la gestion de données (exemple de fonctionnalité).</p>
-        </section>
+                <!-- Actualités -->
+                <div class="feature-section" style="color: black;">
+                    <h2>Actualités</h2>
+                    <article style="margin-bottom:18px; color: black; background-color: white;">
+                        <img style="object-fit: cover;" src="../images/compression.jpg" alt="compression" width="600"
+                            height="400">
+                        <h2>L'info en 3 points</h2>
+                        <ol style="margin-left:30px;  font-size: 1.13rem; line-height: 1.8; list-style: disc inside;">
+                            <li>CompressionX, une start-up britannique, promet de réduire la taille des
+                                fichiers jusqu'à 65% sans perte de qualité.</li>
+                            <li> Le logiciel utilise un algorithme adaptatif pour surpasser les méthodes traditionnelles
+                                comme
+                                Lempel-Ziv, visant une compression plus efficace.</li>
+                            <li> Malgré des promesses alléchantes, le modèle payant de CompressionX pourrait freiner son
+                                adoption
+                                face à des outils gratuits.</li>
+                        </ol>
+                        Dans un secteur longtemps dominé par des noms comme WinRAR et 7-Zip, l'arrivée d'un nouvel
+                        acteur est toujours un événement.
+                        La jeune pousse CompressionX se positionne en alternative aux outils établis, avec une
+                        technologie qui serait plus performante.
+                        Cette annonce intervient alors que les systèmes d'exploitation,
+                        à l'image de la récente mise à jour de qualité de Windows 11 intégrant nativement la gestion de
+                        multiples formats d'archives,
+                        rendent le marché plus compétitif que jamais.
+                    </article>
+                    <article style="margin-bottom:18px; background-color: white;">
+                        <img style="object-fit: cover; border-radius: 8px;" src="../images/avicii-en-2014.jpeg"
+                            width="800" height="400" alt="avicii">
+                        <h2>🚀 Tomorrowland rend hommage à Avicii: “Son histoire est indissociable
+                            de
+                            celle du festival”</h2>
+                        <p>
+                            Tomorrowland va rendre hommage cette année à Tim Bergling, plus connu sous le pseudo <br>
+                            d’Avicii, décédé en 2018, ont annoncé les organisateurs. Un espace commémoratif dédié avec
+                            une narration visuelle et sonore <br> de la vie et de l’héritage d’Avicii sera installé sur
+                            le
+                            terrain du festival où le DJ s’était produit pour la dernière fois il y a dix ans..</p>
+                    </article>
+                    <article>
+                        <img style="object-fit: cover; border-radius: 8px;" src="../images/power.jpg" alt="power"
+                            width="800" height="400">
+                        <h3 style="margin-bottom:4px;">💡 Astuce du jour</h3>
+                        <p style="color:#555;">Voici des exemples de ce qu’on peut faire avec 800 watts (W)
+                            d’électricité : allumer quelques ampoules, faire fonctionner un petit frigo, ou encore
+                            utiliser une petite plaque de cuisson à faible puissance. En soi, une telle puissance ne
+                            représente pas grand-chose, jusqu’à ce qu’on sait que cette énergie a été transmise sans fil
+                            à plusieurs kilomètres de distance, uniquement par un rayon laser traversant l’atmosphère.
+                            C’est ce qu’a réalisé l’agence du ministère de la Défense des États-Unis, la DARPA, durant
+                            une série de tests réalisés au Nouveau-Mexique. L’expérience a été effectuée dans le cadre
+                            du programme POWER (Persistent Optical Wireless Energy Relay), un projet lancé par l’agence
+                            pour développer une nouvelle manière de transmettre de l’énergie à distance.</p>
+                    </article>
+                </div>
+
+                <!-- Galerie -->
+                <div class="feature-section">
+                    <h2>Galerie</h2>
+                    <div class="gallery">
+                        <img id="gallery-main" src="/images/img1.jpg" alt="Image principale" onclick="changeImage()">
+                        <div class="gallery-thumbs">
+                            <img src="/images/box-man-robot-wallpaper-11249_w635.webp" alt="Aperçu 1"
+                                onclick="selectImage(1)">
+                            <img src="/images/iphone-15-pro-max.jpeg" alt="Aperçu 2" onclick="selectImage(2)">
+                            <img src="/images/img4.webp" alt="Aperçu 3" onclick="selectImage(3)">
+                            <img src="/images/boy.jpg" alt="Aperçu 3" onclick="selectImage(4)">
+                            <img src="/images/macbook.jpg" alt="Aperçu 3" onclick="selectImage(5)">
+                            <img src="/images/box-man-robot-wallpaper-11249_w635.webp" alt="Aperçu 3"
+                                onclick="selectImage(6)">
+                            <img src="/images/background3.jpg" alt="Aperçu 3" onclick="selectImage(7)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agenda -->
+                <div class="feature-section">
+                    <h2>Agenda</h2>
+                    <p>Vos prochains événements :</p>
+                    <ul>
+                        <li>📅 Révision Langage C et théorie des Réseaux – 10 juillet, 14h</li>
+                        <li> 🥙 Aller au Réstaurant avec papa et maman 🍻– 12 juillet, 11h</li>
+                        <li>🫱🏻‍🫲🏾 Rencontre avec les membres du groupe JS – 15 juillet, 18h</li>
+                        <li>💻 Términer le projet MSI – 19 juillet, 18h</li>
+                        <li>🔐 Apprendre l'outil metasploit de kali linux – 24 juillet, 8h</li>
+                    </ul>
+                    <form style="margin-top:18px;">
+                        <input type="text" placeholder="Ajouter un événement..."
+                            style="width:70%;padding:8px;border-radius:8px;border:1px solid #b8c1ec;">
+                        <button
+                            style="margin-left:8px;padding:8px 16px;border-radius:8px;background:#b8c1ec;color:#232946;border:none;cursor:pointer;">Ajouter</button>
+                    </form>
+                </div>
+
+                <!-- Paramètres -->
+                <div class="feature-section">
+                    <h2>Paramètres</h2>
+                    <form>
+                        <label style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+                            <span>Mode sombre</span>
+                            <input type="checkbox" />
+                        </label>
+                        <label style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+                            <span>Notifications</span>
+                            <input type="checkbox" checked />
+                        </label>
+                        <label style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+                            <span>Langue</span>
+                            <select>
+                                <option>Français</option>
+                                <option>English</option>
+                            </select>
+                        </label>
+                    </form>
+                </div>
+            </section>
+        </main>
     </div>
-    <!-- Le script JS doit gérer l'affichage des sections et le changement d'image -->
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 DHTML Suite. Tous droits réservés.</p>
+            <ul class="footer-links">
+                Auteurs:
+                <li>Jean Joseph</li>
+                <li>Mitsu</li>
+                <li>Joubert</li>
+                <li>Diary honorah</li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>

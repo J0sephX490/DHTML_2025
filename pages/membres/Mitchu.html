@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CV Mitsu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cv-card">
+        <div class="cv-left">
+            <img src="/images/mitsu.JPG" alt="Mitsu" class="cv-photo">
+            <div class="cv-name">Mitchu</div>
+            <div class="cv-code">Numéro Matricule : 2329 H-F</div>
+            <div class="cv-social">
+                <a href="mailto:andrianaianmitchu@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>  
+            </div>
+            <button class="cv-contact-btn" onclick="openModal()">Contacter Mitchu</button>
+        </div>
+        <div class="cv-right">
+            <div class="cv-section">
+                <div class="cv-section-title"><i class="fa-solid fa-user"></i> À propos</div>
+                <div class="cv-info">
+                    Étudiant en L1 Informatique, motivé, curieux et rigoureux.<br>
+                    Passionné par la programmation et les nouvelles technologies.
+                </div>
+            </div>
+            <div class="cv-section">
+                <div class="cv-section-title"><i class="fa-solid fa-book"></i> Matières étudiées</div>
+                <ul class="cv-list">
+                    <li>Algorithmique et programmation (Python, C)</li>
+                    <li>Mathématiques pour l'informatique</li>
+                    <li>Introduction aux bases de données</li>
+                    <li>Architecture des ordinateurs</li>
+                    <li>Anglais scientifique</li>
+                </ul>
+            </div>
+            <div class="cv-section">
+                <div class="cv-section-title"><i class="fa-solid fa-laptop-code"></i> Compétences</div>
+                <ul class="cv-list">
+                    <li>Langage C (bases)</li>
+                    <li>HTML, CSS (bases)</li>
+                    <li>Utilisation de Linux</li>
+                    <li>Travail en équipe</li>
+                </ul>
+            </div>
+            <div class="cv-section">
+                <div class="cv-section-title"><i class="fa-solid fa-language"></i> Langues</div>
+                <ul class="cv-list">
+                    <li>Français (natif)</li>
+                    <li>Anglais (niveau B1)</li>
+                </ul>
+            </div>
+            <div class="cv-section">
+                <div class="cv-section-title"><i class="fa-solid fa-heart"></i> Centres d'intérêt</div>
+                <ul class="cv-list">
+                    <li>Jeux vidéo</li>
+                    <li>Lecture</li>
+                    <li>Football</li>
+                    <li>Défis de programmation</li>
+                </ul>
+            </div>
+            <a href="/accueil.html" class="cv-back">← Retour à l'accueil</a>
+        </div>
+    </div>
+    <div class="modal-bg" id="modal-bg">
+        <div class="modal">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2>Contacter Mitchu</h2>
+            <form onsubmit="event.preventDefault(); alert('Message envoyé !'); closeModal();">
+                <div style="margin-bottom:12px;">
+                    <input type="text" placeholder="Votre nom" required
+                        style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;">
+                </div>
+                <div style="margin-bottom:12px;">
+                    <input type="email" placeholder="Votre email" required
+                        style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;">
+                </div>
+                <div style="margin-bottom:12px;">
+                    <textarea placeholder="Votre message" required
+                        style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;"></textarea>
+                </div>
+                <button type="submit"
+                    style="width:100%;padding:10px;border-radius:6px;background:#1877f2;color:#fff;font-weight:600;border:none;">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function openModal() {
+            document.getElementById('modal-bg').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('modal-bg').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -200,7 +200,6 @@ button:hover {
 .footer-links a {
   border-radius: 8px;
   padding: 12px 19px;
-  background-color: #162c193f;
   color: rgb(195, 204, 190);
   text-decoration: none;
   font-size: 1em;
@@ -209,7 +208,6 @@ button:hover {
 }
 
 .footer-links a:hover {
-  background-color: #324a64;
   color: white;
   transition: 1s;
 }
