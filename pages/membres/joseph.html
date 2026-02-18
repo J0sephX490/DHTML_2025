@@ -1,95 +1,480 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <title>CV Mitsu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de Jean Joseph - Étudiant en informatique spécialisé en développement web et administration réseau">
+    <title>Jean Joseph - CV Professionnel IT</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="cv-card">
-        <div class="cv-left">
-            <img src="/images/joseph.png" alt="Mitsu" class="cv-photo">
-            <div class="cv-name">Jean Joseph</div>
-            <div class="cv-code">Numéro Matricule : 2202 H-F</div>
-            <div class="cv-social">
-                <a href="mailto:mitsu@mail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>  
+    <div class="cv-container">
+        <!-- Sidebar Gauche -->
+        <aside class="cv-sidebar">
+            <!-- Photo professionnelle -->
+            <div class="profile-section">
+                <div class="profile-photo">
+                    <img src="/images/joseph.jpg" alt="Jean Joseph">
+                    <div class="profile-badge">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+                <h1 class="profile-name">Jean Joseph</h1>
+                <p class="profile-title">Étudiant en Informatique</p>
+                <div class="profile-status">
+                    <span class="status-dot"></span>
+                    Disponible pour stages
+                </div>
             </div>
-            <button class="cv-contact-btn" onclick="openModal()">Contacter Joseph</button>
-        </div>
-        <div class="cv-right">
-            <div class="cv-section">
-                <div class="cv-section-title"><i class="fa-solid fa-user"></i> À propos</div>
-                <div class="cv-info">
-                    Je m'appelle Joseph, étudiant en première année d'informatique.<br>
-                    Je decouvre encore le monde de l'administration réseaux, mais je suis motivé
-                    à apprendre, à pratiquer et à comprendre comment tout fonctionne. Même si je débute
-                    dans ce domaine, j'avance pas à pas , avec beaucoup d'observation et de détermination.
 
+            <!-- Informations de contact -->
+            <div class="contact-section">
+                <h3 class="section-title">
+                    <i class="fas fa-address-card"></i>
+                    Contact
+                </h3>
+                <div class="contact-list">
+                    <a href="mailto:josephlauter@outlook.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>josephlauter@outlook.com</span>
+                    </a>
+                    <a href="tel:+261342054901" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+261 34 20 549 01</span>
+                    </a>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Fianarantsoa, Madagascar</span>
+                    </div>
                 </div>
             </div>
-            <div class="cv-section">
-                <div class="cv-section-title"><i class="fa-solid fa-laptop-code"></i> Compétences</div>
-                <ul class="cv-list">
-                    <li>Langage C (bases)</li>
-                    <li>HTML, CSS (bases)</li>
-                    <li>Javascript</li>
-                    <li>Utilisation de Linux</li>
-                    <li>Travail en équipe</li>
-                </ul>
+
+            <!-- Réseaux sociaux -->
+            <div class="social-section">
+                <h3 class="section-title">
+                    <i class="fas fa-share-nodes"></i>
+                    Réseaux
+                </h3>
+                <div class="social-links">
+                    <a href="https://github.com/J0sephX490" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/jean-joseph" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://portfolio.jeanjoseph.dev" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </div>
             </div>
-            <div class="cv-section">
-                <div class="cv-section-title"><i class="fa-solid fa-language"></i> Langues</div>
-                <ul class="cv-list">
-                    <li>Français </li>
-                    <li>Anglais</li>
-                </ul>
+
+            <!-- Langues -->
+            <div class="languages-section">
+                <h3 class="section-title">
+                    <i class="fas fa-language"></i>
+                    Langues
+                </h3>
+                <div class="language-item">
+                    <div class="language-header">
+                        <span>Français</span>
+                        <span class="language-level">Bilingue</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="language-header">
+                        <span>Anglais</span>
+                        <span class="language-level">Intermédiaire</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%"></div>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="language-header">
+                        <span>Malagasy</span>
+                        <span class="language-level">Natif</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                </div>
             </div>
-            <div class="cv-section">
-                <div class="cv-section-title"><i class="fa-solid fa-heart"></i> Centres d'intérêt</div>
-                <ul class="cv-list">
-                    <li>Jeux vidéo</li>
-                    <li>Lecture</li>
-                    <li>Football</li>
-                    <li>Défis de programmation</li>
-                </ul>
+
+            <!-- Bouton Contact -->
+            <button class="contact-btn-primary" onclick="openModal()">
+                <i class="fas fa-paper-plane"></i>
+                Me contacter
+            </button>
+        </aside>
+
+        <!-- Contenu Principal -->
+        <main class="cv-content">
+            <!-- Header avec navigation -->
+            <div class="cv-header">
+                <a href="/accueil.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Retour à l'accueil
+                </a>
+                <div class="header-actions">
+                    <button class="action-btn" onclick="window.print()">
+                        <i class="fas fa-download"></i>
+                        Télécharger PDF
+                    </button>
+                    <button class="action-btn" onclick="openModal()">
+                        <i class="fas fa-envelope"></i>
+                        Contact
+                    </button>
+                </div>
             </div>
-            <a href="/accueil.html" class="cv-back">← Retour à l'accueil</a>
-        </div>
+
+            <!-- À propos / Profil -->
+            <section class="content-section">
+                <h2 class="content-title">
+                    <i class="fas fa-user-circle"></i>
+                    Profil professionnel
+                </h2>
+                <div class="content-text">
+                    <p>
+                        Étudiant passionné en première année d'informatique, je me spécialise dans le développement web 
+                        et l'administration de systèmes et réseaux. Mon parcours académique m'a permis de développer 
+                        une solide base en programmation et une forte capacité d'apprentissage autonome.
+                    </p>
+                    <p>
+                        Actuellement, je développe mes compétences en création d'applications web modernes avec 
+                        JavaScript, HTML/CSS, et j'explore les technologies backend. Mon objectif est de contribuer 
+                        à des projets innovants tout en continuant à enrichir mes connaissances techniques.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Formation -->
+            <section class="content-section">
+                <h2 class="content-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Formation
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Licence en Informatique</h3>
+                                <span class="timeline-date">
+                                    <i class="far fa-calendar"></i>
+                                    2025 - En cours
+                                </span>
+                            </div>
+                            <p class="timeline-location">
+                                <i class="fas fa-building"></i>
+                                Université / École d'Informatique
+                            </p>
+                            <ul class="timeline-list">
+                                <li>Spécialisation : Développement Web et Administration Réseaux</li>
+                                <li>Cours principaux : Algorithmique, Programmation C, Bases de données</li>
+                                <li>Projet de groupe : DHTML Suite - Collection d'outils web</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Baccalauréat Série C/D</h3>
+                                <span class="timeline-date">
+                                    <i class="far fa-calendar"></i>
+                                    2024
+                                </span>
+                            </div>
+                            <p class="timeline-location">
+                                <i class="fas fa-building"></i>
+                                Lycée [Nom du lycée]
+                            </p>
+                            <ul class="timeline-list">
+                                <li>Option : Mathématiques et Sciences</li>
+                                <li>Mention : Bien</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Compétences techniques -->
+            <section class="content-section">
+                <h2 class="content-title">
+                    <i class="fas fa-code"></i>
+                    Compétences techniques
+                </h2>
+                
+                <div class="skills-grid">
+                    <!-- Programmation -->
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">
+                            <i class="fas fa-laptop-code"></i>
+                            Langages de programmation
+                        </h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">HTML / CSS</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">C</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" style="width: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outils & Technologies -->
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">
+                            <i class="fas fa-tools"></i>
+                            Outils & Technologies
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Terminal/Shell</span>
+                            <span class="skill-tag">npm</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <!-- Compétences transversales -->
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">
+                            <i class="fas fa-users-gear"></i>
+                            Soft Skills
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Travail d'équipe</span>
+                            <span class="skill-tag">Résolution de problèmes</span>
+                            <span class="skill-tag">Apprentissage autonome</span>
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Gestion de projet</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projets -->
+            <section class="content-section">
+                <h2 class="content-title">
+                    <i class="fas fa-folder-open"></i>
+                    Projets réalisés
+                </h2>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div>
+                                <h3>DHTML Suite</h3>
+                                <p class="project-date">2025 - Projet académique</p>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Suite d'outils web comprenant un calculateur Cramer, un éditeur d'images, 
+                            un panneau publicitaire animé et un analyseur de données. Développé en équipe 
+                            de 4 étudiants.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML/CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="/accueil.html" class="project-link">
+                                <i class="fas fa-eye"></i> Voir le projet
+                            </a>
+                            <a href="https://github.com/J0sephX490" class="project-link">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div>
+                                <h3>Configuration Réseau</h3>
+                                <p class="project-date">2025 - Pratique personnelle</p>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Configuration et administration de réseaux locaux sous Linux. Apprentissage 
+                            des protocoles réseau, routage et sécurité.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Linux</span>
+                            <span class="tech-badge">Networking</span>
+                            <span class="tech-badge">Shell</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Centres d'intérêt -->
+            <section class="content-section">
+                <h2 class="content-title">
+                    <i class="fas fa-heart"></i>
+                    Centres d'intérêt
+                </h2>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Gaming & eSport</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-code-branch"></i>
+                        <span>Open Source</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-book"></i>
+                        <span>Lecture tech</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-futbol"></i>
+                        <span>Football</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <span>Coding challenges</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-robot"></i>
+                        <span>IA & Nouvelles tech</span>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="modal-bg" id="modal-bg">
-        <div class="modal">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <h2>Contacter Joseph</h2>
-            <form onsubmit="event.preventDefault(); alert('Message envoyé !'); closeModal();">
-                <div style="margin-bottom:12px;">
-                    <input type="text" placeholder="Votre nom" required
-                        style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;">
+
+    <!-- Modal de contact -->
+    <div class="modal-overlay" id="modal-bg" onclick="closeModal()">
+        <div class="modal-container" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <i class="fas fa-envelope-open-text"></i>
+                <h2>Me contacter</h2>
+                <p>Remplissez le formulaire ci-dessous</p>
+            </div>
+
+            <form class="modal-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">
+                        <i class="fas fa-user"></i>
+                        Votre nom
+                    </label>
+                    <input type="text" id="name" placeholder="Nom complet" required>
                 </div>
-                <div style="margin-bottom:12px;">
-                    <input type="email" placeholder="Votre email" required
-                        style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;">
+
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                        Votre email
+                    </label>
+                    <input type="email" id="email" placeholder="email@example.com" required>
                 </div>
-                <div style="margin-bottom:12px;">
-                    <textarea placeholder="Votre message" required
-                        style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;"></textarea>
+
+                <div class="form-group">
+                    <label for="subject">
+                        <i class="fas fa-tag"></i>
+                        Sujet
+                    </label>
+                    <select id="subject" required>
+                        <option value="">Sélectionner un sujet</option>
+                        <option value="stage">Proposition de stage</option>
+                        <option value="projet">Collaboration projet</option>
+                        <option value="autre">Autre</option>
+                    </select>
                 </div>
-                <button type="submit"
-                    style="width:100%;padding:10px;border-radius:6px;background:#1877f2;color:#fff;font-weight:600;border:none;">Envoyer</button>
+
+                <div class="form-group">
+                    <label for="message">
+                        <i class="fas fa-comment"></i>
+                        Message
+                    </label>
+                    <textarea id="message" rows="5" placeholder="Votre message..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Envoyer le message
+                </button>
             </form>
         </div>
     </div>
+
+    <!-- Scripts -->
     <script>
         function openModal() {
             document.getElementById('modal-bg').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         }
+
         function closeModal() {
             document.getElementById('modal-bg').style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Animation de succès
+            const btn = event.target.querySelector('.submit-btn');
+            btn.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
+            btn.style.background = '#10b981';
+            
+            setTimeout(() => {
+                closeModal();
+                event.target.reset();
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer le message';
+                btn.style.background = '';
+            }, 2000);
+        }
+
+        // Fermer avec Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
     </script>
 </body>
 </html>

@@ -3,72 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'accueil</title>
+    <meta name="description" content="DHTML Suite Nexus - L'écosystème d'outils nouvelle génération pour les créateurs d'aujourd'hui">
+    <meta name="keywords" content="DHTML, outils web, calculateur Cramer, redimensionnement image, datatable, animation web">
+    <meta name="author" content="Équipe DHTML Suite">
+    <meta name="theme-color" content="#3b82f6">
+    
+    <title>DHTML Suite Nexus - Outils Nouvelle Génération</title>
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles/accueil.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo.png">
 </head>
 <body>
-    <header>
-        <div class="gauche">
-            <img src="/images/logo.png" class="logo" alt="Logo">
-            <h1>DHTML Suite</h1>
+    <!-- Particules animées en arrière-plan -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header Fixe avec Navigation Intégrée -->
+    <header class="header-navigation">
+        <!-- Logo et Brand -->
+        <div class="header-brand">
+            <img src="/images/logo.png" alt="DHTML Suite" class="brand-logo">
+            <div class="brand-text">
+                <h1>DHTML SUITE</h1>
+                <span class="brand-tagline">NEXUS</span>
+            </div>
         </div>
 
+        <!-- Navigation Principale -->
+        <nav class="header-nav" aria-label="Navigation principale">
+            <a href="#home" class="nav-link active" data-tooltip="Accueil">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="/pages/cramer.html" class="nav-link" data-tooltip="Calculateur Cramer">
+                <i class="fas fa-calculator"></i>
+                <span>Cramer</span>
+            </a>
+            <a href="/pages/image.html" class="nav-link" data-tooltip="Image Editor">
+                <i class="fas fa-image"></i>
+                <span>Image</span>
+            </a>
+            <a href="./pages/publicitaire.html" class="nav-link" data-tooltip="Panneau Pub">
+                <i class="fas fa-rectangle-ad"></i>
+                <span>Panneau</span>
+            </a>
+            <a href="./pages/datable.html" class="nav-link" data-tooltip="DataTable">
+                <i class="fas fa-table"></i>
+                <span>DataTable</span>
+            </a>
+        </nav>
+
+        <!-- Actions et Réseaux Sociaux -->
         <div class="header-actions">
-            <button class="contact-btn">Contact</button>
-            <div class="social-icons">
-                <a href="https://github.com/J0sephX490" target="_blank" aria-label="GitHub">
+            <button class="action-btn">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </button>
+            
+            <div class="social-links">
+                <a href="https://github.com/J0sephX490" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/votre-profil" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                <a href="https://x.com/votre-compte" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
                     <i class="fab fa-x-twitter"></i>
                 </a>
             </div>
         </div>
+
+        <!-- Menu Mobile Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
-    <main>
-        <nav>
-            <a href="./pages/page_accueil.html">
-                <img src="/images/dev.jpg" alt="Développeur">
-                <h2>Page d'accueil</h2>
-                <p>contenant plusieurs fonctionnalité</p>
-            </a>
-            <a href="/pages/cramer.html">
-                <img src="/images/CRAMER.jpg" alt="">
-                <h2>Cramer</h2>
-                <p>Résoudre un système 3 inconnues</p>
-            </a>
 
-            <a href="/pages/image.html">
-                <img src="/images/image.jpg" alt="image">
-                <h2>Image</h2>
-                <p>Redimensionner une image</p>
-            </a>
+    <!-- Contenu principal -->
+    <main class="main-content">
+        <!-- Hero Section compacte -->
+        <section class="hero" id="home">
+            <div class="hero-backdrop"></div>
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    PROJET ÉTUDIANT L1 - 2025
+                </span>
+                <h2 class="hero-title">
+                    <span class="title-line">DHTML</span>
+                    <span class="title-line gradient-text">SUITE</span>
+                </h2>
+                <p class="hero-description">
+                    Notre premier projet en équipe. Créé avec passion durant notre L1, 
+                    ce projet symbolise nos débuts en développement web et notre esprit d'équipe.
+                </p>
+                
+                <!-- Stats compactes -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">2025</span>
+                        <span class="stat-label">Année de création</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">4</span>
+                        <span class="stat-label">Étudiants L1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">4</span>
+                        <span class="stat-label">Outils créés</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Éléments 3D flottants
+            <div class="floating-elements">
+                <div class="floating-element element-1"></div>
+                <div class="floating-element element-2"></div>
+                <div class="floating-element element-3"></div>
+            </div> -->
+        </section>
 
-            <a href="./pages/publicitaire.html">
-                <img src="/images/686223.png" alt="publicitaire">
-                <h2>Panneau</h2>
-                <p>animation publicitaire</p>
-            </a>
+        <!-- Section Outils -->
+        <section class="tools-section" id="tools">
+            <div class="section-header">
+                <h3 class="section-title">OUTILS <span class="outline-text">PROFESSIONNELS</span></h3>
+                <div class="section-line"></div>
+            </div>
 
-            <a href="./pages/datable.html">
-                <img src="/images/datable.jpg" alt="datable">
-                <h2>Datatable</h2>
-                <p>Analyser des produits avec tableau</p>
-            </a>
-        </nav>
+            <div class="tools-grid">
+                <!-- Carte Cramer -->
+                <a href="/pages/cramer.html" class="tool-card">
+                    <div class="card-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h4>Cramer</h4>
+                    <p>Systèmes linéaires à 3 inconnues avec méthode matricielle</p>
+                    <div class="card-status">
+                        <span class="status-dot"></span>
+                        <span>Disponible</span>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </div>
+                </a>
+
+                <!-- Carte Image -->
+                <a href="/pages/image.html" class="tool-card">
+                    <div class="card-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h4>Image</h4>
+                    <p>Redimensionnez, compressez et optimisez vos images facilement</p>
+                    <div class="card-status">
+                        <span class="status-dot"></span>
+                        <span>Disponible</span>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </div>
+                </a>
+
+                <!-- Carte Panneau -->
+                <a href="./pages/publicitaire.html" class="tool-card">
+                    <div class="card-icon">
+                        <i class="fas fa-rectangle-ad"></i>
+                    </div>
+                    <h4>Panneau</h4>
+                    <p>Créez des animations publicitaires modernes et captivantes</p>
+                    <div class="card-status">
+                        <span class="status-dot"></span>
+                        <span>Disponible</span>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </div>
+                </a>
+
+                <!-- Carte DataTable -->
+                <a href="./pages/datable.html" class="tool-card">
+                    <div class="card-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h4>DataTable</h4>
+                    <p>Analysez vos données avec des tableaux dynamiques et interactifs</p>
+                    <div class="card-status">
+                        <span class="status-dot"></span>
+                        <span>Disponible</span>
+                        <i class="fas fa-arrow-right card-arrow"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section Membres -->
+        <section class="team-section" id="team">
+            <div class="section-header">
+                <h3 class="section-title">L'<span class="gradient-text">ÉQUIPE</span></h3>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="team-showcase">
+                <div class="team-grid">
+                    <!-- Carte Mitsu -->
+                    <div class="team-card" onclick="window.location.href='/pages/membres/Mitchu.html'">
+                        <div class="team-avatar">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <h4>Mitsu</h4>
+                        <p>Lead Developer</p>
+                    </div>
+
+                    <!-- Carte Joubert -->
+                    <div class="team-card" onclick="window.location.href='/pages/membres/joubert.html'">
+                        <div class="team-avatar">
+                            <i class="fas fa-user-ninja"></i>
+                        </div>
+                        <h4>Joubert</h4>
+                        <p>UX Designer</p>
+                    </div>
+
+                    <!-- Carte Diary -->
+                    <div class="team-card" onclick="window.location.href='/pages/membres/diary.html'">
+                        <div class="team-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Diary Honorah</h4>
+                        <p>Project Manager</p>
+                    </div>
+
+                    <!-- Carte Joseph -->
+                    <div class="team-card" onclick="window.location.href='/pages/membres/joseph.html'">
+                        <div class="team-avatar">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h4>Jean Joseph</h4>
+                        <p>Backend Dev</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer enrichi et mémorable -->
+        <footer class="modern-footer">
+            <div class="footer-container">
+                <!-- Section Histoire du Projet -->
+                <div class="footer-story">
+                    <div class="story-header">
+                        <img src="/images/logo.png" alt="DHTML" class="story-logo">
+                        <div>
+                            <h4>DHTML Suite</h4>
+                            <p class="story-badge">Un projet qui nous a uni</p>
+                        </div>
+                    </div>
+                    <p class="story-text">
+                        Né en 2025 durant notre première année universitaire, DHTML Suite représente 
+                        bien plus qu'un simple projet académique. C'est le fruit de nos nuits blanches, 
+                        de nos débats passionnés et de notre volonté d'apprendre ensemble. 
+                        Chaque ligne de code raconte notre parcours.
+                    </p>
+                </div>
+
+                <!-- Section À propos -->
+                <div class="footer-about">
+                    <h5>À propos du projet</h5>
+                    <ul class="about-list">
+                        <li><i class="fas fa-calendar"></i> Créé en 2025</li>
+                        <li><i class="fas fa-users"></i> 4 étudiants passionnés</li>
+                        <li><i class="fas fa-code"></i> 5 outils développés</li>
+                        <li><i class="fas fa-graduation-cap"></i> Projet L1 DHTML</li>
+                    </ul>
+                </div>
+
+                <!-- Section Outils -->
+                <div class="footer-tools">
+                    <h5>Nos outils</h5>
+                    <ul class="tools-list">
+                        <li><a href="/pages/cramer.html"><i class="fas fa-calculator"></i> Cramer</a></li>
+                        <li><a href="/pages/image.html"><i class="fas fa-image"></i> Image Editor</a></li>
+                        <li><a href="./pages/publicitaire.html"><i class="fas fa-rectangle-ad"></i> Panneau Pub</a></li>
+                        <li><a href="./pages/datable.html"><i class="fas fa-table"></i> DataTable</a></li>
+                    </ul>
+                </div>
+
+                <!-- Section Contact -->
+                <div class="footer-contact">
+                    <h5>Restons connectés</h5>
+                    <div class="contact-social">
+                        <a href="https://github.com/J0sephX490" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/votre-profil" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://x.com/votre-compte" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            <i class="fab fa-x-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <p class="copyright-text">
+                    &copy; <span id="currentYear"></span> DHTML Suite - Projet étudiant L1
+                    <span class="separator">•</span>
+                    Créé avec <i class="fas fa-heart"></i> et <i class="fas fa-coffee"></i> par l'équipe
+                </p>
+                <div class="footer-version">
+                    <span class="version-badge">v2.0.0 - Édition 2026</span>
+                </div>
+            </div>
+        </footer>
     </main>
-    <footer>
-        <h2 class="team-title">Membres de l'Équipe</h2>
-        <div class="team-members">
-            <div onclick="window.location.href='/pages/membres/Mitchu.html'" class="team-member">Mitsu</div>
-            <div onclick="window.location.href='/pages/membres/joubert.html'" class="team-member">Joubert</div>
-            <div onclick="window.location.href='/pages/membres/diary.html'" class="team-member">Diary honorah</div>
-            <div onclick="window.location.href='/pages/membres/joseph.html'" class="team-member">Jean Joseph</div>
-        </div>
-    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Année dynamique
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Menu mobile toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const headerNav = document.querySelector('.header-nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            headerNav.classList.toggle('active');
+            const icon = mobileMenuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Fermer le menu mobile lors du clic sur un lien
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                headerNav.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Navigation active selon le scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = 'home';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Animation des particules (simple)
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 3 + 's';
+            particlesContainer.appendChild(particle);
+        }
+    </script>
 </body>
 </html>
